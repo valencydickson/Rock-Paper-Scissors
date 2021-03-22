@@ -11,4 +11,5 @@ visit: [Rock Paper Scissors](https://rock-paper-scissors-ten-coral.vercel.app/)
 This project uses:
 - HTML
 - CSS
+- BootStrap
 - jQuery

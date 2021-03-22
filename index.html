@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rock, Paper, Scissors Game</title>
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap and jQuery -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Css style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <img src="images/logo.svg" alt="Rock Paper Scissors" class="logo" />
+      <div class="score-board">
+        <p>Score</p>
+        <h2>0</h2>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main-content">
+      <div class="icons">
+        <div class="first-row">
+          <button type="button" class="paper">
+            <img src="images/icon-paper.svg" alt="paper" role="button" />
+          </button>
+
+          <button type="button" class="scissor">
+            <img src="images/icon-scissors.svg" alt="Scissors" role="button" />
+          </button>
+        </div>
+
+        <div class="second-row">
+          <button type="button" class="rock">
+            <img src="images/icon-rock.svg" alt="rock" role="button" />
+          </button>
+        </div>
+      </div>
+
+      <div class="rules-btn">
+        <button type="button" data-toggle="modal" data-target="#myModal">
+          Rules
+        </button>
+      </div>
+
+      <!-- Rules modal -->
+
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body">
+              <h4 class="modal-title">Rules</h4>
+              <img
+                src="images/image-rules.svg"
+                alt="image-rules"
+                class="image-rules"
+              />
+              <button type="button" data-dismiss="modal">
+                <img src="images/icon-close.svg" alt="icon-close" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selection container -->
+      <div class="selection-container">
+        <div class="user-selection">
+          <img src="images/icon-rock.svg" class="user-img" alt="user-img" />
+          <p>You picked</p>
+        </div>
+        <div class="house-selection">
+          <div class="house">
+            <img src="images/icon-rock.svg" class="house-img" alt="house-img" />
+          </div>
+          <p>The house picked</p>
+        </div>
+      </div>
+
+      <!-- Result container -->
+
+      <div class="result">
+        <h1>You Lose</h1>
+        <a href="" role="button">Play Again</a>
+      </div>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

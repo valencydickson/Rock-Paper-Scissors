@@ -1,0 +1,289 @@
+:root {
+  /* Primary */
+
+  --ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+  --PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+  --RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+  --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+  --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+  /* Neutral */
+
+  --DarkText: hsl(229, 25%, 31%);
+  --ScoreText: hsl(229, 64%, 46%);
+  --HeaderOutline: hsl(217, 16%, 45%);
+
+  /* Background */
+
+  --RadialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  transition: transform 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+button:active,
+button:focus {
+  outline: none;
+  border: none;
+  transform: scale(0.9);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  width: 90%;
+  margin: 1.5em auto 5em;
+  padding: 1em;
+  border: 2px solid var(--HeaderOutline);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 55px;
+}
+
+.score-board {
+  padding: 0.3em 1em 0.1em;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.score-board p {
+  color: var(--ScoreText);
+  font-size: 0.7rem;
+  margin-bottom: -0.5em;
+}
+
+.score-board h2 {
+  font-size: 2rem;
+  color: var(--DarkText);
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* MAIN */
+
+main {
+  margin: auto;
+  width: 75%;
+}
+
+.icons {
+  background-image: url(/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12em;
+  margin-bottom: 2em;
+}
+
+.icons button {
+  padding: 1em;
+  background-color: white;
+  border-radius: 50%;
+  border: 10px solid;
+  object-fit: cover;
+  margin-bottom: 3em;
+}
+
+.paper {
+  border-color: hsl(230, 89%, 62%) !important;
+}
+
+.scissor {
+  border-color: hsl(39, 89%, 49%) !important;
+}
+
+.rock {
+  border-color: hsl(349, 71%, 52%) !important;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.7em;
+}
+
+.second-row {
+  text-align: center;
+}
+
+.rules-btn {
+  text-align: center;
+}
+
+.rules-btn button {
+  color: white;
+  padding: 0.5em 2em;
+  font-size: 0.9rem;
+  border: 1px solid var(--HeaderOutline);
+  border-radius: 5px;
+  background: none;
+}
+
+/* Rules modal */
+
+.modal {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-body {
+  margin-top: 3em;
+}
+
+.modal-title {
+  font-weight: 700;
+  margin-bottom: 4em;
+}
+
+.modal-body img {
+  margin: auto;
+  margin-bottom: 6em;
+}
+
+.modal-body button {
+  margin: auto;
+  border: none;
+  background: none;
+}
+
+.modal-body button img {
+  margin: 0;
+}
+
+/* Selection container */
+
+.selection-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 25em;
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+
+.selection-container img {
+  padding: 1em;
+  background-color: white;
+  border-radius: 50%;
+  border: 10px solid;
+  margin-bottom: 1em;
+}
+
+.win {
+  box-shadow: 0 0 0 30px #2b3858, 0 0 0 50px #263555, 0 0 0 50px #223351;
+}
+
+.selection-container p {
+  text-align: center;
+  color: white;
+}
+
+.house-selection {
+  border-radius: 50%;
+}
+
+.house {
+  background-color: hsl(237, 49%, 15%);
+  margin: auto;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.house-img {
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+
+/* Result container */
+
+.result {
+  position: relative;
+  bottom: 22em;
+  text-align: center;
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+
+.result h1 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.result a {
+  color: var(--DarkText);
+  font-size: 0.9rem;
+  padding: 0.8em 2.2em;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* FOR LARGER SCREENS */
+
+@media screen and (min-width: 500px) {
+  header {
+    max-width: 600px;
+    margin: 1.5em auto 5em;
+    padding: 1em;
+    border: 2px solid var(--HeaderOutline);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main {
+    max-width: 300px;
+  }
+
+  .modal-content {
+    margin-top: 2em;
+  }
+
+  .modal-title {
+    font-weight: 700;
+    margin-bottom: 2em;
+  }
+
+  .modal-body {
+    margin-top: 1em;
+  }
+
+  .image-rules {
+    height: 40vh;
+  }
+}

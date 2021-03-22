@@ -4,7 +4,7 @@
 
 It is a game played between user and computer.
 
-visit: [Rock Paper Scissors](https://easy-bank-plum.vercel.app/)
+visit: [Rock Paper Scissors](https://rock-paper-scissors-ten-coral.vercel.app/)
 
 **Tools Used**
 

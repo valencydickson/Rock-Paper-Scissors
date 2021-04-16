@@ -4,7 +4,20 @@
 
 It is a game played between user and computer.
 
-visit: [Rock Paper Scissors](https://rock-paper-scissors-ten-coral.vercel.app/)
+Users should be able to:
+
+- Play Rock, Paper, Scissors against the computer
+- Maintain the state of the score after refreshing the browser
+
+### Rules
+
+If the player wins, they gain 1 point. If the computer wins, the player loses one point.
+
+- Paper beats Rock
+- Rock beats Scissors
+- Scissors beats Paper
+
+Visit app: [Rock Paper Scissors](https://rock-paper-scissors-ten-coral.vercel.app/)
 
 **Tools Used**
 

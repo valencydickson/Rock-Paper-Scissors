@@ -21,8 +21,10 @@ Visit app: [Rock Paper Scissors](https://rock-paper-scissors-ten-coral.vercel.ap
 
 **Tools Used**
 
-This project uses:
-- HTML
-- CSS
-- BootStrap
-- jQuery
+This project built with:
+
+- Semantic HTML5 markup
+- CSS custom properties
+- [Bootstrap](https://getbootstrap.com/) - CSS framework
+- [jQuery](https://jquery.com/) - JS library
+
